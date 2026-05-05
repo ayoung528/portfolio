@@ -19,30 +19,24 @@ const steps = [
   },
   {
     step: '04',
-    title: 'AI 기반 마이그레이션 자동화',
-    body: '105개 패키지에 공통으로 필요한 index.ts, package.json, project.json, rollup.config.js 생성 작업을 Claude Code에 위임해 반복 업무를 자동화했습니다. 이를 통해 휴먼 에러를 방지함과 동시에 핵심 설계 작업에 집중하여 전체 마이그레이션 기간을 획기적으로 단축할 수 있었습니다. 아울러 백그라운드 배포 자동화 스크립트를 설계해 병렬 개발 환경을 구축했습니다.',
-    tags: ['Claude Code', '백그라운드 배포 스크립트', '휴먼 에러 방지'],
-  },
-  {
-    step: '05',
     title: '트리쉐이킹으로 번들 최적화',
     body: '라이브러리 경량화를 위해 ESM 문법 적용, 선택적 import, Rollup의 preserveModules: true, sideEffects: false 설정으로 트리쉐이킹을 구성했습니다. lodash를 lodash-es로 전면 교체하여 실제 사용되는 코드만 번들에 포함되도록 개선했습니다.',
     tags: ['ESM', 'preserveModules', 'sideEffects: false', 'lodash-es'],
   },
   {
-    step: '06',
+    step: '05',
     title: 'DX 도구 및 가이드라인 제공',
     body: '새로운 환경 도입 시 동료들이 겪을 수 있는 초기 학습 비용을 최소화하고자 상세한 트러블슈팅 문서와 공유용 기술 가이드를 작성하고, 누락된 peerDependencies를 자동으로 탐색·설치하거나 전체 라이브러리를 한 번에 업데이트하는 커스텀 자동화 스크립트를 배포했습니다.',
     tags: ['트러블슈팅 문서', '자동화 스크립트', '팀 DX'],
   },
   {
-    step: '07',
+    step: '06',
     title: 'CI/CD 파이프라인',
     body: '멀티레포 운영 당시의 로컬 수동 배포 방식은 배포 이력 공유 미흡으로 인한 버전 충돌이 빈번했습니다. GitLab CI/CD를 구축하여 원격 저장소 푸시 시 빌드 및 배포가 자동 수행되도록 개선하고, Discord 웹훅으로 배포 완료 알림을 연동했습니다.',
     tags: ['GitLab CI/CD', 'Discord 웹훅'],
   },
   {
-    step: '08',
+    step: '07',
     title: '품질 검증 체계',
     body: '대규모 리뉴얼 제품의 품질을 보장하기 위해 Playwright를 활용한 시각적 회귀 테스트 환경을 구축했습니다. 모노레포 컴포넌트 적용 전후의 서버 화면을 정밀하게 캡처 및 비교하여 의도치 않은 UI 변경 사항을 사전에 검출하고 안정적인 릴리즈 기반을 마련했습니다.',
     tags: ['Playwright', '시각적 회귀 테스트'],
