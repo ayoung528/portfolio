@@ -1,4 +1,4 @@
-import DependencyFlow from './DependencyFlow';
+import DependencyFlow from '@/components/monorepo/DependencyFlow';
 
 export default function Overview() {
   return (

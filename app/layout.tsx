@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import Sidebar from '@/components/Sidebar';
 
 export const metadata: Metadata = {
   title: '포트폴리오 - 정아영',
@@ -21,12 +20,7 @@ export default function RootLayout({
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body>
-        <div style={{ display: 'flex', minHeight: '100vh' }}>
-          <Sidebar />
-          <main style={{ flex: 1, minWidth: 0 }}>{children}</main>
-        </div>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

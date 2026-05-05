@@ -1,8 +1,11 @@
 'use client';
 
 import { useEffect, useState, useRef } from 'react';
+import Link from 'next/link';
 
-const sections = [
+export type SectionItem = { id: string; label: string };
+
+const defaultSections: SectionItem[] = [
   { id: 'hero', label: 'Intro' },
   { id: 'problem', label: 'Problem' },
   { id: 'overview', label: 'Overview' },
@@ -12,7 +15,11 @@ const sections = [
   { id: 'techstack', label: 'Tech Stack' },
 ];
 
-export default function Sidebar() {
+export default function Sidebar({
+  sections = defaultSections,
+}: {
+  sections?: SectionItem[];
+}) {
   const [active, setActive] = useState('hero');
   const [menuOpen, setMenuOpen] = useState(false);
   const clickedRef = useRef<string | null>(null);
@@ -112,36 +119,29 @@ export default function Sidebar() {
         }}
       >
         <div style={{ padding: '0 2rem' }}>
-          <div
+          <Link
+            href="/"
             style={{
-              display: 'flex',
+              display: 'inline-flex',
               alignItems: 'center',
-              gap: '10px',
-              marginBottom: '2.5rem',
+              gap: '6px',
+              fontSize: '0.72rem',
+              color: 'var(--color-ink-faint)',
+              textDecoration: 'none',
+              marginBottom: '1.75rem',
+              transition: 'color 0.15s ease',
             }}
+            onMouseEnter={(e) =>
+              (e.currentTarget.style.color = 'var(--color-ink)')
+            }
+            onMouseLeave={(e) =>
+              (e.currentTarget.style.color = 'var(--color-ink-faint)')
+            }
           >
-            <img
-              src="/profile.jpg"
-              alt="프로필"
-              style={{
-                width: '32px',
-                height: '32px',
-                borderRadius: '50%',
-                objectFit: 'cover',
-                flexShrink: 0,
-              }}
-            />
-            <p
-              style={{
-                fontSize: '0.7rem',
-                letterSpacing: '0.18em',
-                color: 'var(--color-ink-faint)',
-                margin: 0,
-              }}
-            >
-              Jeong A Young
-            </p>
-          </div>
+            <span style={{ fontSize: '0.9rem', lineHeight: 1 }}>←</span>
+            목록
+          </Link>
+
           <NavItems />
         </div>
         <div style={{ padding: '0 2rem' }}>
@@ -177,7 +177,21 @@ export default function Sidebar() {
         }}
         className="mob-topbar"
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <Link
+            href="/"
+            style={{
+              fontSize: '0.72rem',
+              color: 'var(--color-ink-faint)',
+              textDecoration: 'none',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '4px',
+            }}
+          >
+            <span style={{ fontSize: '0.9rem', lineHeight: 1 }}>←</span>
+            목록
+          </Link>
           <img
             src="/profile.jpg"
             alt="프로필"

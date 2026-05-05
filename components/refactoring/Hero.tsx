@@ -1,20 +1,24 @@
 export default function Hero() {
   return (
-    <section className="px-16 mob-px mob-pt-sm pt-24 pb-20 mob-py-sm">
+    <section className="px-16 mob-px py-20 mob-py-sm">
       <p
-        className="fade-up text-xs tracking-[0.2em] uppercase mb-10"
+        className="text-xs tracking-[0.2em] uppercase mb-8 fade-up"
         style={{ color: 'var(--color-ink-faint)' }}
       >
-        Monorepo Portfolio · 2026
+        Refactoring
       </p>
 
       <h1
         className="serif fade-up fade-up-delay-1 mob-h1"
-        style={{ fontSize: '4.5rem', lineHeight: 1.05, marginBottom: '2rem' }}
+        style={{
+          fontSize: '4.5rem',
+          lineHeight: 1.05,
+          marginBottom: '2rem',
+        }}
       >
-        멀티레포에서
+        실시간 데이터 화면
         <br />
-        모노레포로
+        렌더링 최적화
       </h1>
 
       <p
@@ -26,27 +30,9 @@ export default function Hero() {
           maxWidth: '630px',
         }}
       >
-        지속적으로 증가하는 컴포넌트 라이브러리의 유지보수 비용과 개발 효율성
-        저하 문제를 해결하기 위해,
-        <br className="mob-hide" /> 26년도 연구 과제로 지정하며 105개의 컴포넌트
-        라이브러리를
-        <br className="mob-hide" />
-        멀티레포에서 모노레포로 전환한 과정과 결과를 공유합니다.
-      </p>
-
-      <p
-        className="fade-up fade-up-delay-3 mt-6"
-        style={{
-          fontSize: '0.875rem',
-          color: 'var(--color-ink-faint)',
-          lineHeight: 1.9,
-          maxWidth: '480px',
-        }}
-      >
-        안녕하세요 :) 귀한 시간 내어 제 포트폴리오에 방문해 주셔서 감사합니다.
-        <br />
-        모쪼록 흥미롭게 읽어주시길 바라며, 당사와 컬쳐핏이 잘 맞았으면
-        좋겠습니다.
+        여러 컴포넌트에 파편화된 소켓 통신 로직을 중앙화하고,
+        <br /> UI와 비즈니스 로직을 분리하여 유지보수성과 렌더링 성능을 개선한
+        리팩토링 작업입니다.
       </p>
 
       <div
@@ -59,7 +45,7 @@ export default function Hero() {
       >
         {[
           { label: '역할', value: '프론트엔드 개발자' },
-          { label: '기간', value: '2025년 12월 ~ 현재' },
+          { label: '기간', value: '2026년 1월' },
           { label: '부서 / 직급', value: '개발센터 / 전임(대리)' },
         ].map(({ label, value }) => (
           <div key={label}>
