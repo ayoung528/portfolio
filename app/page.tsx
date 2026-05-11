@@ -11,15 +11,15 @@ export default function LandingPage() {
       tags: ['Nx', 'Changesets', 'Rollup', 'GitLab CI/CD'],
       result: 'Parsed Size 24% 감소',
     },
-    {
-      href: '/refactoring',
-      index: '02',
-      category: 'Refactoring',
-      title: '실시간 데이터 화면\n렌더링 최적화',
-      desc: '여러 컴포넌트에 파편화된 소켓 통신 로직을 중앙화하고, UI와 비즈니스 로직을 분리하여 유지보수성과 렌더링 성능을 개선한 리팩토링 작업입니다.',
-      tags: ['React 19', 'useEffectEvent', 'socket.io', 'TanStack Query'],
-      result: '소켓 재연결 n회 → 1회',
-    },
+    // {
+    //   href: '/refactoring',
+    //   index: '02',
+    //   category: 'Refactoring',
+    //   title: '실시간 데이터 화면\n렌더링 최적화',
+    //   desc: '여러 컴포넌트에 파편화된 소켓 통신 로직을 중앙화하고, UI와 비즈니스 로직을 분리하여 유지보수성과 렌더링 성능을 개선한 리팩토링 작업입니다.',
+    //   tags: ['React 19', 'useEffectEvent', 'socket.io', 'TanStack Query'],
+    //   result: '소켓 재연결 n회 → 1회',
+    // },
   ];
 
   return (
