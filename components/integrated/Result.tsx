@@ -71,8 +71,8 @@ export default function Result() {
             <p
               className="serif shrink-0"
               style={{
-                fontSize: '2rem',
-                lineHeight: 1,
+                fontSize: '1.25rem',
+                lineHeight: 1.2,
                 color: 'var(--color-ink)',
                 width: '200px',
                 paddingTop: '2px',
