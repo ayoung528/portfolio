@@ -452,20 +452,20 @@ export default function AI() {
             복잡 체커 ≥ 6개
           </text>
 
-          {/* 분기 화살표 */}
+          {/* 분기 화살표 — 임계치 박스 우측(x=428)에서 결과 박스 좌측(x=478)으로 */}
           <line
-            x1="452"
-            y1="288"
-            x2="476"
+            x1="428"
+            y1="277"
+            x2="478"
             y2="264"
             stroke="var(--color-ink-faint)"
             strokeWidth="1.5"
             markerEnd="url(#arrow-ai)"
           />
           <line
-            x1="452"
-            y1="310"
-            x2="476"
+            x1="428"
+            y1="321"
+            x2="478"
             y2="330"
             stroke="var(--color-ink-faint)"
             strokeWidth="1.5"
