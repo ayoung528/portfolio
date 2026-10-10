@@ -35,7 +35,7 @@ Built with Next.js + Tailwind + Pretendard font. Deployed on Vercel.
 - Page route: `/integrated`
 - Core features: Checker / Rule Pack / Reference CRUD, AI tag extraction, multi-tag matching algorithm, automated security reference coverage rate calculation
 - AI: On-premise Llama (Ollama), JSON Mode, matching threshold of 3~6 tags
-- Tech stack: React, Next.js, shadcn/ui, Tailwind, Storybook, Sentry
+- Tech stack: React, Next.js, shadcn/ui, Tailwind, Storybook
 - Page structure: Hero → Overview → Background → Process → AI → Result → TechStack
 
 ## Design Guidelines

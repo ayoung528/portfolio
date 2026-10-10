@@ -23,10 +23,9 @@ const stack = [
     ],
   },
   {
-    category: '협업 & 모니터링',
+    category: '협업',
     items: [
       { name: 'Storybook', desc: '컴포넌트 설계 공유' },
-      { name: 'Sentry', desc: '에러 로그 모니터링' },
       { name: 'Figma', desc: '와이어프레임 설계' },
       { name: 'Jira', desc: '일감 및 브랜치 관리' },
     ],

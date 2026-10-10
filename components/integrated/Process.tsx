@@ -28,13 +28,6 @@ const steps = [
       'GraphQL',
     ],
   },
-  {
-    step: '04',
-    phase: 'Deploy',
-    title: '배포 및 에러 모니터링 도입',
-    body: '제품 릴리즈 이후 Sentry를 도입하여 프론트엔드 에러 로그를 실시간으로 추적할 수 있는 환경을 구축했습니다. 배포 후 발생하는 예외 상황을 빠르게 감지하고 대응할 수 있어 서비스 안정성을 높였습니다.',
-    tags: ['Sentry', '에러 모니터링', '서비스 안정성'],
-  },
 ];
 
 export default function Process() {

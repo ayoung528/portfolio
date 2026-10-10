@@ -26,7 +26,7 @@ export default function LandingPage() {
     //   category: 'Integrated System',
     //   title: '흩어진 리소스를\n하나의 플랫폼으로',
     //   desc: '소스코드에 하드코딩된 2,000개 이상의 취약점 검출 룰을 DB화하고, AI 기반 태그 추출과 다중 매칭 알고리즘으로 보안 레퍼런스 지원율을 자동 산출하는 사내 통합 관리 시스템입니다.',
-    //   tags: ['React', 'Next.js', 'shadcn/ui', 'Ollama (Llama)', 'Sentry'],
+    //   tags: ['React', 'Next.js', 'shadcn/ui', 'Ollama (Llama)'],
     //   result: '수동 계산 불가 → 지원율 실시간 산출',
     // },
   ];
