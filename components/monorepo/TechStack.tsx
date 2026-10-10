@@ -26,6 +26,8 @@ const stack = [
     category: 'AI & 테스트',
     items: [
       { name: 'Claude Code', desc: 'AI 코딩 어시스턴트' },
+      { name: 'MCP', desc: 'Figma·문서 연동 AI 규칙' },
+      { name: 'Storybook (MDX)', desc: '컴포넌트 문서화' },
       { name: 'Playwright', desc: 'UI 자동화 테스트' },
     ],
   },

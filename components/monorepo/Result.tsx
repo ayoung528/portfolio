@@ -180,6 +180,49 @@ export default function Result() {
           })}
         </div>
       </div>
+      <div
+        className="mob-col1 mt-16 pt-12"
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(3, 1fr)',
+          gap: '16px',
+          borderTop: '1px solid var(--color-border)',
+        }}
+      >
+        {[
+          { value: '54%', label: 'Stat Size 감소', sub: '3.31MB → 1.51MB' },
+          { value: '0건', label: '배포 버전 충돌', sub: '전환 전 월 5건' },
+          { value: '5초', label: '신규 컴포넌트 생성', sub: '스캐폴딩 전 약 10분' },
+        ].map(({ value, label, sub }) => (
+          <div
+            key={label}
+            className="rounded-2xl p-7"
+            style={{ background: 'var(--color-surface)' }}
+          >
+            <p
+              className="serif"
+              style={{ fontSize: '2.5rem', color: 'var(--color-ink)', lineHeight: 1 }}
+            >
+              {value}
+            </p>
+            <p
+              style={{
+                fontSize: '0.82rem',
+                fontWeight: 600,
+                color: 'var(--color-ink)',
+                marginTop: '12px',
+              }}
+            >
+              {label}
+            </p>
+            <p
+              style={{ fontSize: '0.75rem', color: 'var(--color-ink-faint)', marginTop: '4px' }}
+            >
+              {sub}
+            </p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

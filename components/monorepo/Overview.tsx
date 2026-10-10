@@ -1,5 +1,3 @@
-import DependencyFlow from '@/components/monorepo/DependencyFlow';
-
 export default function Overview() {
   return (
     <section
@@ -22,7 +20,7 @@ export default function Overview() {
         달라졌죠?
       </h2>
       <p
-        className="mb-16"
+        className="mb-4"
         style={{
           fontSize: '0.9rem',
           color: 'var(--color-ink-muted)',
@@ -41,15 +39,6 @@ export default function Overview() {
         을 도입해 릴리즈 프로세스를 체계화했습니다.
       </p>
 
-      <p
-        className="text-xs tracking-[0.2em] uppercase mb-6 font-bold"
-        style={{ color: 'var(--color-ink-faint)' }}
-      >
-        의존성 구조 변화
-      </p>
-      <div className="mb-20">
-        <DependencyFlow />
-      </div>
     </section>
   );
 }

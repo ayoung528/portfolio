@@ -7,9 +7,9 @@ export default function LandingPage() {
       index: '01',
       category: 'Architecture',
       title: '멀티레포에서\n모노레포로',
-      desc: '트리쉐이킹 미지원, 의존성 파편화 문제를 Nx 기반 모노레포로 해결하고 Parsed Size를 250KB 감소시킨 대규모 마이그레이션 작업입니다.',
+      desc: '트리쉐이킹 미지원과 수동 배포로 인한 버전 충돌 문제를 Nx 기반 모노레포로 해결해, 대표 모듈 번들 크기를 54% 줄이고 배포 버전 충돌을 월 5건에서 0건으로 없앤 105개 컴포넌트 마이그레이션 작업입니다.',
       tags: ['Nx', 'Changesets', 'Rollup', 'GitLab CI/CD'],
-      result: 'Parsed Size 24% 감소',
+      result: '번들 크기 54% 감소',
     },
     // {
     //   href: '/refactoring',
