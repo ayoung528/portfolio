@@ -44,7 +44,7 @@ export default function Hero() {
       >
         {[
           { label: '역할', value: '프론트엔드 개발자' },
-          { label: '기간', value: '2025년 12월 ~ 현재' },
+          { label: '기간', value: '2025년 12월 ~ 2026년 6월' },
           { label: '부서 / 직급', value: '개발센터 / 전임(대리)' },
         ].map(({ label, value }) => (
           <div key={label}>
