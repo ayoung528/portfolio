@@ -3,7 +3,8 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: '포트폴리오 - 정아영',
-  description: '멀티레포에서 모노레포로, 100개 컴포넌트 라이브러리 전환기',
+  description:
+    'AI가 코드를 쓰고 판단하는 환경을 사람이 믿고 쓸 수 있게 만드는 프론트엔드 개발자 정아영의 포트폴리오',
 };
 
 export default function RootLayout({

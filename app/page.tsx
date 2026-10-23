@@ -3,8 +3,26 @@ import Link from 'next/link';
 export default function LandingPage() {
   const projects = [
     {
-      href: '/monorepo',
+      href: '/dev-platform',
       index: '01',
+      category: 'AI Platform',
+      title: '사람에게 묻던 질문을\n봇이 답하기까지',
+      desc: '"이 일감 담당자는 누구죠?", "이 API는 어느 화면에서 쓰나요?"처럼 특정 사람에게 몰리던 질문을 Discord 봇과 프론트엔드 Code RAG로 대신 답하고, 장애 대응까지 범위를 제한한 AI 에이전트로 자동화한 사내 플랫폼입니다.',
+      tags: ['Code RAG', 'MCP', 'AI Agent', 'n8n'],
+      result: '개발자 10명 사용',
+    },
+    {
+      href: '/security-impact',
+      index: '02',
+      category: 'AI Reliability',
+      title: 'LLM의 판단을\n믿을 수 있게',
+      desc: '매일 프론트엔드 의존성을 검사하고 사내 LLM으로 실제 코드 영향을 판정해 대응 우선순위와 Jira 초안을 전달합니다. LLM은 근거만 답하고 최종 판정은 규칙 코드가 내리도록 설계해, 흔들리던 판정을 일관되게 만들었습니다.',
+      tags: ['사내 LLM', 'TypeScript AST', 'OSV', 'LLM Evaluation'],
+      result: '판정 결정을 LLM에서 규칙으로',
+    },
+    {
+      href: '/monorepo',
+      index: '03',
       category: 'Architecture',
       title: '멀티레포에서\n모노레포로',
       desc: '트리쉐이킹 미지원과 수동 배포로 인한 버전 충돌 문제를 Nx 기반 모노레포로 해결해, 대표 모듈 번들 크기를 54% 줄이고 배포 버전 충돌을 월 5건에서 0건으로 없앤 105개 컴포넌트 마이그레이션 작업입니다.',
