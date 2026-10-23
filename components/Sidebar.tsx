@@ -154,7 +154,7 @@ export default function Sidebar({
           >
             UI / UX / DX
             <br />
-            Frontend Dev
+            Product Engineer
           </p>
         </div>
       </aside>
