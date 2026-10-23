@@ -7,7 +7,7 @@ export default function LandingPage() {
       index: '01',
       category: 'AI Platform',
       title: '사람에게 묻던 질문을\n봇이 답하기까지',
-      desc: '"이 일감 담당자는 누구죠?", "이 API는 어느 화면에서 쓰나요?"처럼 특정 사람에게 몰리던 질문을 Discord 봇과 프론트엔드 Code RAG로 대신 답하고, 장애 대응까지 범위를 제한한 AI 에이전트로 자동화한 사내 플랫폼입니다.',
+      desc: '"이 일감 담당자는 누구죠?", "이 API는 어느 화면에서 쓰나요?"처럼 특정 사람에게 몰리던 질문을 Discord 봇과 API · 화면 매핑으로 대신 답하고, 장애 대응까지 범위를 제한한 AI 에이전트로 자동화한 사내 플랫폼입니다.',
       tags: ['Code RAG', 'MCP', 'AI Agent', 'n8n'],
       result: '개발자 10명 사용',
     },

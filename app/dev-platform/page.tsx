@@ -12,7 +12,7 @@ import {
 export const metadata: Metadata = {
   title: '사내 개발 지원 플랫폼 - 정아영',
   description:
-    '사람에게 묻던 담당자와 API 사용 화면을 Discord 봇과 Code RAG로 답하고, 장애 대응까지 AI 에이전트로 자동화한 사내 플랫폼',
+    '사람에게 묻던 담당자와 API 사용 화면을 Discord 봇으로 답하고, 장애 대응까지 AI 에이전트로 자동화한 사내 플랫폼',
 };
 
 const strong = (t: string) => (
@@ -39,12 +39,12 @@ export default function DevPlatformPage() {
               <br className="mob-hide" />
               매번 특정 사람에게 몰리던 질문을 없애기 위해 직접 제안하고,
               <br className="mob-hide" />
-              Discord 봇과 프론트엔드 Code RAG, 장애 대응 AI 에이전트까지 혼자
+              Discord 봇과 API · 화면 매핑, 장애 대응 AI 에이전트까지 직접
               만들어 운영한 과정을 공유합니다.
             </>
           }
           meta={[
-            { label: '역할', value: '기획 · 설계 · 개발 · 운영 (단독)' },
+            { label: '역할', value: '기획 · 설계 · 개발 · 운영' },
             { label: '기간', value: '2026년 9월 ~ 현재' },
             { label: '부서 / 직급', value: '개발센터 / 전임(대리)' },
           ]}
@@ -64,8 +64,8 @@ export default function DevPlatformPage() {
               desc: '백엔드 개발자가 API를 바꿀 때마다 "이 API는 어느 화면에서 쓰나요?"를 프론트엔드 개발자에게 물었고, 답하려면 프론트엔드 개발자가 import를 직접 거슬러 올라가야 했습니다.',
             },
             {
-              title: '도구가 늘수록 운영도 늘었어요',
-              desc: '봇 하나 뒤에 워크플로, 배포 파이프라인, 외부 API가 함께 맞물려 있어, 기능이 늘어날수록 어디가 고장 났는지 확인하는 일이 새로운 부담이 됐습니다.',
+              title: '도구가 늘수록 확인할 곳도 늘었어요',
+              desc: '봇 하나 뒤에 Jira 담당자 매칭, API · 화면 매핑, GraphQL 스키마 조회, 보안 취약점 알림, n8n 워크플로까지 5개의 도구가 연동되어 있었습니다. 그중 하나라도 고장 나면 어디서 문제가 생겼는지 매번 직접 찾아 확인해야 했고, 이 일이 점점 큰 부담이 됐습니다.',
             },
           ]}
         />
@@ -112,11 +112,11 @@ export default function DevPlatformPage() {
               stage: 'Services',
               nodes: [
                 {
-                  title: '담당자 동기화',
+                  title: 'Jira 담당자 매칭',
                   desc: 'Notion 회의록 → 담당자 마스터, 주 3회',
                 },
                 {
-                  title: 'Code RAG',
+                  title: 'API · 화면 매핑',
                   desc: '코드 색인 · API 사용 화면 역추적 · MCP',
                 },
                 {
@@ -147,7 +147,7 @@ export default function DevPlatformPage() {
               title: '회의록을 데이터로 바꾸기',
               problem:
                 '담당자 정보가 정리되지 않은 회의록 문서에만 있었고, 같은 티켓의 담당자가 회의마다 바뀌기도 했습니다.',
-              body: 'FE·BE 주간회의록을 규칙 기반으로 파싱해 주 3회 담당자 마스터에 동기화했습니다. 새 티켓은 만들고 담당자가 바뀐 티켓만 갱신하며, 버전이 충돌하는 담당자는 자동으로 고르지 않고 사람이 확인할 항목으로 남겼습니다. 이제 Jira 티켓 하나만 입력하면 담당자 확인, 협업 스레드 생성, 요구사항 · Figma · 관련 명세 첨부까지 한 번에 처리됩니다.',
+              body: 'FE·BE 주간회의록을 규칙 기반으로 파싱해 주 3회 담당자 마스터에 동기화했습니다. 새 티켓은 만들고 담당자가 바뀐 티켓만 갱신합니다. 이제 Jira 티켓 하나만 입력하면 담당자 확인, 협업 스레드 생성, 요구사항 · Figma · 관련 명세 첨부까지 한 번에 처리됩니다.',
               tags: ['n8n', 'Notion API', 'Jira', '규칙 기반 파싱'],
             },
             {
@@ -163,18 +163,6 @@ export default function DevPlatformPage() {
                 '공통 레이아웃을 거치는 API는 거의 모든 화면에 연결된 것처럼 나와, 답이 오히려 혼란을 줬습니다.',
               body: '여러 화면이 공유하는 공통 경로로만 연결된 API는 기본 목록에서 분리했습니다. 브라우저 자동화로 실제 화면을 순회하며 요청을 수집해 정적 분석 결과와 대조하고, 답변에는 "정적 코드 연결"과 "실제 관측"을 나눠 표시했습니다. 색인이 최신 커밋보다 뒤처졌거나 관측의 배포 커밋을 확인하지 못하면 경고를 함께 붙입니다.',
               tags: ['Stagehand', '정적 · 런타임 대조', '최신성 경고'],
-            },
-            {
-              title: '같은 색인을 AI 에이전트에게도',
-              body: '사람만 쓰는 도구로 끝내지 않고, 같은 색인을 MCP 서버로 열어 Claude Code 같은 코딩 에이전트가 저장소를 체크아웃하지 않고도 화면 위치, 컴포넌트 사용처, API 호출 화면을 조회할 수 있게 했습니다.',
-              tags: ['MCP', 'Claude Code', 'OpenAPI'],
-            },
-            {
-              title: 'HTTP 200을 믿지 않기',
-              problem:
-                '외부 워크플로가 내부에서 실패해도 빈 HTTP 200을 돌려줘, 사용자 화면의 버튼이 로딩 상태에 그대로 멈췄습니다.',
-              body: '통신 성공과 업무 완료를 구분했습니다. 워크플로가 실제 작업 완료 응답을 보냈는지 확인해 성공을 판정하고, 확인되지 않으면 실패로 처리해 버튼을 다시 누를 수 있게 되돌렸습니다.',
-              tags: ['성공 기준 재정의', '실패 복구 UX'],
             },
             {
               title: '"같은 문장인가"가 아니라 "같은 알림인가"',
@@ -251,7 +239,7 @@ export default function DevPlatformPage() {
               category: '서버 & 봇',
               items: [
                 { name: 'Node.js', desc: '봇 · API 서버 · 에이전트' },
-                { name: 'TypeScript', desc: 'Code RAG 서버' },
+                { name: 'TypeScript', desc: 'API · 화면 매핑 서버' },
                 { name: 'Discord.js', desc: '슬래시 명령 · 스레드' },
                 { name: 'n8n', desc: '워크플로 · Gateway' },
               ],
