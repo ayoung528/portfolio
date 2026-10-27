@@ -16,8 +16,8 @@ export default function LandingPage() {
       index: '02',
       category: 'AI Reliability',
       title: 'LLM의 판단을\n믿을 수 있게',
-      desc: '매일 프론트엔드 의존성을 검사하고 사내 LLM으로 실제 코드 영향을 판정해 대응 우선순위와 Jira 초안을 전달합니다. LLM은 근거만 답하고 최종 판정은 규칙 코드가 내리도록 설계해, 흔들리던 판정을 일관되게 만들었습니다.',
-      tags: ['사내 LLM', 'TypeScript AST', 'OSV', 'LLM Evaluation'],
+      desc: '매일 프론트엔드 의존성을 검사하고 OpenAI·Anthropic API로 실제 코드 영향을 판정해 대응 우선순위와 Jira 초안을 전달합니다. LLM은 근거만 답하고 최종 판정은 규칙 코드가 내리도록 설계해, 흔들리던 판정을 일관되게 만들었습니다.',
+      tags: ['OpenAI · Anthropic API', 'TypeScript AST', 'OSV', 'LLM Evaluation'],
       result: '판정 결정을 LLM에서 규칙으로',
     },
     {

@@ -13,7 +13,7 @@ import {
 export const metadata: Metadata = {
   title: '오픈소스 취약점 영향 분석 자동화 - 정아영',
   description:
-    '사내 LLM이 실제 코드 영향을 판정하되, 최종 결론은 규칙 코드가 내리도록 설계한 프론트엔드 취약점 알림 자동화',
+    'OpenAI·Anthropic API로 연동한 LLM이 실제 코드 영향을 판정하되, 최종 결론은 규칙 코드가 내리도록 설계한 프론트엔드 취약점 알림 자동화',
 };
 
 const strong = (t: string) => (
@@ -146,7 +146,7 @@ export default function SecurityImpactPage() {
               ],
             },
           ]}
-          note="모든 사내 LLM 노드는 temperature 0으로 실행하고, LLM이 실패하거나 형식이 틀려도 검사를 멈추지 않고 '업데이트 필요' 알림으로 이어집니다."
+          note="모든 LLM 노드는 temperature 0으로 실행하고, LLM이 실패하거나 형식이 틀려도 검사를 멈추지 않고 '업데이트 필요' 알림으로 이어집니다."
         />
       </div>
 
@@ -288,7 +288,7 @@ export default function SecurityImpactPage() {
             {
               category: 'AI',
               items: [
-                { name: '사내 LLM', desc: '식별자 추출 · 조건 판정' },
+                { name: 'OpenAI · Anthropic API', desc: '식별자 추출 · 조건 판정' },
                 { name: '품질 측정 도구', desc: '실행 기록 재판정' },
               ],
             },
